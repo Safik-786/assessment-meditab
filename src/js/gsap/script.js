@@ -35,7 +35,7 @@ const tl = gsap.timeline({
     trigger: ".card-wrapper",
     start: "top top",
     end: "+=400%",  // Enough scroll range
-    scrub: 2,
+    scrub: 1,
     pin: true,
     markers: false
   }
@@ -44,14 +44,14 @@ const tl = gsap.timeline({
 // Card 1: Slight left → move up → fade out
 tl.to(".card-1", {
 
-  duration: 1,
+  duration: 0.3,
   ease: "power1.out"
 })
   .to(".card-1", {
     x: 0,
     y: -800,
     opacity: 0,
-    duration: 2,
+    duration: 1,
     ease: "power2.inOut"
   })
 
@@ -72,7 +72,7 @@ tl.to(".card-1", {
     y: -800,
     opacity: 0,
     scale: 0.95, // shrink slightly as it leaves
-    duration: 2,
+    duration: 1,
     ease: "power2.inOut"
   })
 
@@ -92,7 +92,7 @@ tl.to(".card-1", {
     x: 0,
     y: -800,
     opacity: 0,
-    duration: 2,
+    duration: 1,
     ease: "power2.inOut"
   });
 
