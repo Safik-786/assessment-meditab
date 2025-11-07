@@ -1,0 +1,1 @@
+// components/cursor.js

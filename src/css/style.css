@@ -1,0 +1,244 @@
+
+
+/* Reset default browser margin, padding and ensure consistent box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Root-level variables for easy theme customization */
+:root {
+    --primary-color: rgba(8, 85, 159);
+}
+
+/* Global body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: aliceblue; /* simple neutral background */
+    /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */ /* optional gradient */
+}
+
+
+/* -------------------------------------------------
+   TOP SPACER SECTION (INTRO + SCROLL PROMPT)
+   ------------------------------------------------- */
+
+.spacer {
+    height: 100vh; /* full viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    font-size: 2rem;
+    color: white;
+    overflow: hidden; /* hides any overflowed animation parts */
+    /* background: linear-gradient(135deg, #007bff, var(--primary-color)); */ /* optional background gradient */
+}
+
+/* "Scroll Down" Text Styling */
+.scroll-text {
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: 2px;
+    color: var(--primary-color);
+    display: inline-block;
+}
+
+/* Each letter can be animated individually by GSAP */
+.letter {
+    display: inline-block;
+    transform: translateY(0); /* provides base transform for GSAP animations */
+}
+
+/* Arrow after scroll text */
+.arrow {
+    display: inline-block;
+    color: var(--primary-color);
+    margin-left: 10px;
+    font-size: 2.5rem;
+    opacity: 0; /* hidden initially, revealed through animation */
+}
+
+/* Additional text color consistency inside spacer */
+.spacer h1 {
+    color: var(--primary-color);
+}
+
+
+   /* CARD SECTION WRAPPER (MAIN CONTENT) */
+
+.card-section {
+    width: 100%;
+    margin: auto;
+    background-color: white;
+}
+
+/* Container for GSAP scroll-pinned animation */
+.card-wrapper {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+}
+
+/* Section title styling */
+.top-header {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 34px;
+    padding: 65px 0px;
+}
+
+
+   /* INDIVIDUAL CARD STYLES */
+
+.card-container {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* allows cards to stack absolutely */
+}
+
+/* Base card styling shared by all cards */
+.card {
+    position: absolute;
+    width: 400px;
+    height: 85vh;
+    border-radius: 20px;
+    border: 1px solid gray;
+    display: flex;
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+/* Subtle hover scaling effect */
+.card:hover {
+    transform: scale(1.02);
+}
+
+/* Left section of card (content) */
+.card-content {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 60px;
+    border-radius: 20px;
+}
+
+/* Right section of card (image or video) */
+.card-image {
+    width: 55%;
+    height: 100%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+/* Ensure images inside picture take full space */
+.card-image picture {
+    width: 100%;
+    height: 100%;
+}
+
+/* Inner card heading */
+.card-inner-heading {
+    color: var(--primary-color);
+    font-size: 28px;
+}
+
+/* Card description text */
+.card-description {
+    font-size: 15px;
+    color: #7b7a7a;
+    font-weight: lighter;
+    line-height: 22px;
+}
+
+/* Video container (used in the 3rd card) */
+.card-video {
+    width: 70%;
+    height: 102%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* ensures video doesn’t exceed border radius */
+}
+
+/* Background for specific card content (3rd card) */
+#card-content {
+    background-color: #fbfbfb;
+}
+
+   /* MEDIA ELEMENT STYLES (IMAGES AND VIDEOS) */
+
+/* Ensures video covers area proportionally */
+.card-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/* Image responsiveness and scaling */
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* avoids image distortion */
+    object-position: center center;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition: transform 0.4s ease;
+}
+
+   /* CARD STACK LAYOUT CONFIGURATION */
+
+/* Topmost card */
+.card-1 {
+    background: white;
+    z-index: 3;
+    width: 80%;
+}
+
+/* Middle card (slightly behind) */
+.card-2 {
+    background: white;
+    transform: translateY(25px) scale(0.95);
+    z-index: 2;
+    width: 80%;
+}
+
+/* Bottom card (farthest in stack) */
+.card-3 {
+    background: white;
+    transform: translateY(50px) scale(0.9);
+    z-index: 1;
+    width: 80%;
+    overflow: hidden;
+}
+
+
+   /* END SPACER SECTION (AFTER PIN UNLOCK) */
+
+.end-spacer {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--primary-color);
+    background-color: aliceblue;
+}

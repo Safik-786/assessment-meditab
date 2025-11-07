@@ -1,0 +1,61 @@
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 15px 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  max-width: 400px;
+  cursor: pointer;
+}
+
+.profile-card img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 1px solid var(--primary-color);
+  padding: 1px;
+  object-fit: cover;
+}
+
+a{
+    text-decoration: none;
+}
+/* ---------- PROFILE CONTENT ---------- */
+.profile-content h2 {
+  color: var(--primary-color);
+  font-size: 20px;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.designation{
+  color: rgb(78, 78, 78);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 480px) {
+  .profile-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .profile-card img {
+    height: 60px;
+    width: 60px;
+  }
+
+  .profile-content h2 {
+    font-size: 18px;
+  }
+
+  .profile-content p {
+    font-size: 14px;
+  }
+}

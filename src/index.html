@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic Page Setup -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Essentials -->
+    <title>GSAP Card Stack | Simplify Medication Administration</title>
+    <meta name="description"
+        content="Simplify medication administration with DosePack. Scannable QR codes, customizable dose configurations, and tearable dose cups for convenience.">
+
+    <!-- Linking Stylesheets -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/profile.css">
+
+    <!-- GSAP and ScrollTrigger Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Top Spacer Section -->
+    <!-- This section creates an initial empty viewport height area before the animation section starts -->
+    <div class="spacer">
+
+        <!-- Profile Card linking to Portfolio -->
+        <!-- Including author attribution and external portfolio for credibility -->
+        <a href="https://portfolio-safik.vercel.app/">
+            <div class="profile-card">
+                <img src="./assets/images/desktop/profile.jpg" alt="Profile Image of Safik Mohammad">
+                <div class="profile-content">
+                    <h2>Safik Mohammad</h2>
+                    <p class="designation">Web Developer</p>
+                </div>
+            </div>
+        </a>
+
+        <!-- Scroll Instruction Text -->
+        <h1 class="scroll-text">
+            Scroll Down <span class="arrow">↓</span>
+        </h1>
+    </div>
+
+    <!-- Main Card Section -->
+    <!-- This section will be pinned during scroll using GSAP ScrollTrigger -->
+    <div class="card-section">
+
+        <!-- Header Text with Emphasis on Keywords for Better Readability -->
+        <h1 class="top-header">
+            <span>Simplify <span style="color: var(--primary-color);">Medication</span></span>
+            <span style="color: var(--primary-color);"> Administration </span>
+            <span>With A DosePack</span>
+        </h1>
+
+        <!-- Card Wrapper for Stacking Animation -->
+        <div class="card-wrapper">
+            <div class="card-container">
+
+                <!-- Card 1: Scannable QR Codes -->
+                <div class="card card-1">
+                    <div class="card-content">
+                        <h3 class="card-inner-heading">Scannable QR Codes <br> On Every Dose Cup</h3>
+                        <p class="card-description">
+                            Verify doses and automate eMAR simply by scanning the QR code during drug administration.
+                        </p>
+                    </div>
+
+                    <!-- Responsive Image Handling using <picture> -->
+                    <!-- The 'source' tag loads optimized images based on screen width -->
+                    <div class="card-image">
+                        <picture>
+                            <source srcset="./assets/images/mobile/mobile_usp_scanner.png" media="(max-width: 768px)">
+                            <img src="./assets/images/desktop/desktop_usp_scanner.png" alt="Scannable QR Code on Dose Cup">
+                        </picture>
+                    </div>
+                </div>
+
+                <!-- Card 2: Custom Configurations -->
+                <div class="card card-2">
+                    <div class="card-content">
+                        <h3 class="card-inner-heading">Choose from <br> 26+ Customizable Configurations</h3>
+                        <p class="card-description">
+                            Tailor-made compliance packs according to weekly, biweekly, or monthly dose cycles.
+                        </p>
+                    </div>
+
+                    <!-- Responsive Image for Card 2 -->
+                    <div class="card-image">
+                        <picture>
+                            <source srcset="./assets/images/mobile/mobile_usp_multipleQR.png" media="(max-width: 768px)">
+                            <img src="./assets/images/desktop/desktop_usp_multipleQR.png"
+                                alt="Customizable Dose Configuration Options">
+                        </picture>
+                    </div>
+                </div>
+
+                <!-- Card 3: Tearable Dose Cups -->
+                <div class="card card-3">
+                    <div class="card-content" id="card-content">
+                        <h3 class="card-inner-heading">Tearable Dose Cups For Convenience</h3>
+                        <p class="card-description">
+                            Travel-friendly tearaway dose cups for medication intake at the prescribed time.
+                        </p>
+                    </div>
+
+                    <!-- Responsive Video using <video> tag -->
+                    <!-- Includes both desktop and mobile video versions -->
+                    <div class="card-video">
+                        <video autoplay muted loop playsinline title="Product Overview Video">
+                            <source src="./assets/videos/mobile/mobile_usp_video.mp4" media="(max-width: 768px)"
+                                type="video/mp4">
+                            <source src="./assets/videos/desktop/desktop_usp_video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End Spacer Section -->
+    <!-- Provides final scrollable space after the pinned animation ends -->
+    <div class="end-spacer">
+        <h1>Section Unpinned - Keep Scrolling</h1>
+    </div>
+
+    <!-- JavaScript Files -->
+    <!-- Keeping scripts at the bottom for better page load performance -->
+    <script src="./js/gsap/script.js"></script>
+    <script src="./js/gsap/profile.js"></script>
+
+</body>
+
+</html>
