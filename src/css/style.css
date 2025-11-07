@@ -1,5 +1,3 @@
-
-
 /* Reset default browser margin, padding and ensure consistent box-sizing */
 * {
     margin: 0;
@@ -15,8 +13,10 @@
 /* Global body styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: aliceblue; /* simple neutral background */
-    /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */ /* optional gradient */
+    background-color: aliceblue;
+    /* simple neutral background */
+    /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+    /* optional gradient */
 }
 
 
@@ -25,7 +25,8 @@ body {
    ------------------------------------------------- */
 
 .spacer {
-    height: 100vh; /* full viewport height */
+    height: 100vh;
+    /* full viewport height */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,8 +34,10 @@ body {
     gap: 100px;
     font-size: 2rem;
     color: white;
-    overflow: hidden; /* hides any overflowed animation parts */
-    /* background: linear-gradient(135deg, #007bff, var(--primary-color)); */ /* optional background gradient */
+    overflow: hidden;
+    /* hides any overflowed animation parts */
+    /* background: linear-gradient(135deg, #007bff, var(--primary-color)); */
+    /* optional background gradient */
 }
 
 /* "Scroll Down" Text Styling */
@@ -49,7 +52,8 @@ body {
 /* Each letter can be animated individually by GSAP */
 .letter {
     display: inline-block;
-    transform: translateY(0); /* provides base transform for GSAP animations */
+    transform: translateY(0);
+    /* provides base transform for GSAP animations */
 }
 
 /* Arrow after scroll text */
@@ -58,7 +62,8 @@ body {
     color: var(--primary-color);
     margin-left: 10px;
     font-size: 2.5rem;
-    opacity: 0; /* hidden initially, revealed through animation */
+    opacity: 0;
+    /* hidden initially, revealed through animation */
 }
 
 /* Additional text color consistency inside spacer */
@@ -67,7 +72,7 @@ body {
 }
 
 
-   /* CARD SECTION WRAPPER (MAIN CONTENT) */
+/* CARD SECTION WRAPPER (MAIN CONTENT) */
 
 .card-section {
     width: 100%;
@@ -95,14 +100,15 @@ body {
 }
 
 
-   /* INDIVIDUAL CARD STYLES */
+/* INDIVIDUAL CARD STYLES */
 
 .card-container {
     height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative; /* allows cards to stack absolutely */
+    position: relative;
+    /* allows cards to stack absolutely */
 }
 
 /* Base card styling shared by all cards */
@@ -117,6 +123,8 @@ body {
     font-weight: bold;
     color: white;
     transition: transform 0.3s ease;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+
 }
 
 /* Subtle hover scaling effect */
@@ -173,7 +181,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* ensures video doesn’t exceed border radius */
+    overflow: hidden;
+    /* ensures video doesn’t exceed border radius */
 }
 
 /* Background for specific card content (3rd card) */
@@ -181,7 +190,7 @@ body {
     background-color: #fbfbfb;
 }
 
-   /* MEDIA ELEMENT STYLES (IMAGES AND VIDEOS) */
+/* MEDIA ELEMENT STYLES (IMAGES AND VIDEOS) */
 
 /* Ensures video covers area proportionally */
 .card-video video {
@@ -197,14 +206,15 @@ body {
 .card-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* avoids image distortion */
+    object-fit: cover;
+    /* avoids image distortion */
     object-position: center center;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     transition: transform 0.4s ease;
 }
 
-   /* CARD STACK LAYOUT CONFIGURATION */
+/* CARD STACK LAYOUT CONFIGURATION */
 
 /* Topmost card */
 .card-1 {
@@ -231,7 +241,7 @@ body {
 }
 
 
-   /* END SPACER SECTION (AFTER PIN UNLOCK) */
+/* END SPACER SECTION (AFTER PIN UNLOCK) */
 
 .end-spacer {
     height: 100vh;
