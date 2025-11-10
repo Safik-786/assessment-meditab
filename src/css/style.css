@@ -124,6 +124,7 @@ body {
     color: white;
     transition: transform 0.3s ease;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
 
 }
 
@@ -211,8 +212,6 @@ body {
     object-fit: cover;
     /* avoids image distortion */
     object-position: center center;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
     transition: transform 0.4s ease;
 }
 
